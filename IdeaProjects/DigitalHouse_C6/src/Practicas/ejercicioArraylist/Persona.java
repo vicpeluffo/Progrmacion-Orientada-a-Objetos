@@ -1,20 +1,20 @@
 package Practicas.ejercicioArraylist;
 
-import semana_6.practica.Contenedor;
-
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Persona {
     private String nombre;
     private String apellido;
     private Integer edad;
-    private ArrayList<Cuenta> cuenta;
+    private ArrayList<Cuenta> cuenta = new ArrayList<Cuenta>();
 
-    public Persona(String nombre, String apellido, Integer edad, ArrayList<Cuenta> cuenta) {
+    public Persona(String nombre, String apellido, Integer edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.cuenta = new ArrayList<Cuenta>();
     }
 
     public String getNombre() {
@@ -26,31 +26,36 @@ public class Persona {
     }
 
     public String getApellido() {
+
         return apellido;
     }
 
     public void setApellido(String apellido) {
+
         this.apellido = apellido;
     }
 
     public Integer getEdad() {
+
         return edad;
     }
 
     public void setEdad(Integer edad) {
+
         this.edad = edad;
     }
 
     public ArrayList<Cuenta> getCuenta() {
+
         return cuenta;
     }
 
     public void setCuenta(ArrayList<Cuenta> cuenta) {
+
         this.cuenta = cuenta;
     }
     public void addCuenta(Cuenta cuenta){
         this.cuenta.add(cuenta);
-
     }
 
     public String getNombreCompleto(){
@@ -65,10 +70,22 @@ public class Persona {
 
 
     public double getSaldoTotal(){
-        return 0.1;
+        Double total = 0.0;
+        for (Cuenta c: this.cuenta) {
+            total += c.getSaldo();
+        }
+        return total;
     }
 
     public void mostrarCuenta(){
+        for (Cuenta c: this.cuenta) {
+            System.out.println(c.getSaldo());
+            c.compareTo(this);
+            System.out.println(c.getSaldo());
+
+        }
+
 
     }
+
 }

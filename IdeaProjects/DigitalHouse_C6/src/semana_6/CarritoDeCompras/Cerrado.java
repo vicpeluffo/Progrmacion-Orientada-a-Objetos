@@ -1,10 +1,10 @@
 package semana_6.CarritoDeCompras;
 
-public class Cerrado implements StateCarrito{
+public class Cerrado implements StateCarrito {
 
     private Carrito carrito;
 
-    public Cerrado(Carrito carrito){
+    public Cerrado(Carrito carrito) {
         this.carrito = carrito;
 
     }
@@ -15,7 +15,7 @@ public class Cerrado implements StateCarrito{
         System.out.println("El carrito esta cerrado");
     }
 
-    public String mostrarEstado (){
+    public String mostrarEstado() {
         return "Cerrado";
     }
 }

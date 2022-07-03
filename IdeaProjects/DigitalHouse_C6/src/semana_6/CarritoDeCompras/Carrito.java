@@ -26,9 +26,9 @@ public class Carrito {
         if (this.estado.mostrarEstado().equalsIgnoreCase("Pagando") || this.estado.mostrarEstado().equalsIgnoreCase("Cerrado")){
             System.out.println("Operacion no valida");
         } else{
-        producto.add(p);
-        setEstado(new Cargando(this));
-        }
+            producto.add(p);
+            setEstado(new Cargando(this));
+        } 
     }
 
     public void vaciarCarrito(){

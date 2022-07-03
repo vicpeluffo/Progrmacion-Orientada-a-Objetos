@@ -9,9 +9,34 @@ public class Cuenta implements Comparable {
         this.saldo = saldo;
     }
 
+    public Integer getNroCuenta() {
+        return nroCuenta;
+    }
+
+    public void setNroCuenta(Integer nroCuenta) {
+        this.nroCuenta = nroCuenta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        Cuenta cuenta = (Cuenta) o;
+        {
+            if (this.nroCuenta == ((Cuenta) o).nroCuenta) {
+                return 0;
+            } else if (this.nroCuenta > ((Cuenta) o).nroCuenta) {
+                return 1;
+            } else {
+                return 2;
+            }
+
+        }
     }
 }
