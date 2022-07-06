@@ -9,7 +9,7 @@ public class Program {
         Cuenta cuentaCorrienteM = new Cuenta (67890, 2000);
         Persona MartinP = new Persona("Martin", "Paliza", 33);
         MartinP.addCuenta(cuentaCorrienteM);
-        MartinP.addCuenta(cuentaCorrienteM);
+        MartinP.addCuenta(cuentaDeMartin);
 
         MartinP.mostrarCuenta();
     }
