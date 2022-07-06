@@ -37,6 +37,7 @@ public class FactoryFiguras {
             locomotora.addFigura(rectangulo4);
             locomotora.addFigura(circulo4);
             locomotora.addFigura(circulo5);
+            locomotora.addFigura(triangulo);
             return locomotora;
         }
         else throw new Exception("Invalido");
