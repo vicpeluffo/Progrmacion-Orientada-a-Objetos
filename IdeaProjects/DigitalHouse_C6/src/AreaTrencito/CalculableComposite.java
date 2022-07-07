@@ -3,7 +3,7 @@ package AreaTrencito;
 import java.util.ArrayList;
 
 public class CalculableComposite implements Calculable{
-
+    //atributo que declara al arreglo
     private ArrayList<Calculable> figuras = new ArrayList<>();
     private String nombre;
 
@@ -19,8 +19,9 @@ public class CalculableComposite implements Calculable{
         }
         return areaTotal;
     }
-
+    //metodo que añade objetos en el arreglo
     public void addFigura(Calculable c){
+
         this.figuras.add(c);
     }
 }

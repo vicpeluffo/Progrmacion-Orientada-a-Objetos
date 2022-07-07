@@ -82,6 +82,7 @@ public class Persona {
             System.out.println(c.getSaldo());
             c.compareTo(this);
             System.out.println(c.getSaldo());
+            Collections.sort(cuenta);
 
         }
 
