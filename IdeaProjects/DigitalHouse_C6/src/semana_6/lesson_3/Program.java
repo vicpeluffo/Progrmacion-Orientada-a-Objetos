@@ -5,8 +5,8 @@ public class Program {
         Almacen a = new Almacen();
         Producto caja1 = a.construir("caja10x10");
 
-//        Producto pelota1 = a.construir("pelotaFutbol");
-//        System.out.println(caja1.calcularEspacio());
+        Producto pelota1 = a.construir("pelotaFutbol");
+        System.out.println(caja1.calcularEspacio());
 
     }
 }

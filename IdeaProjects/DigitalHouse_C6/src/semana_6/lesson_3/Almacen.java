@@ -25,7 +25,10 @@ public class Almacen {
     }
 
     public Double calcularEspacioNecesario(){
-        return 2.0;
+        Double total = 0.0;
+        for (Producto p: this.productos)
+            total += p.calcularEspacio();
+        return total;
 
     }
 
