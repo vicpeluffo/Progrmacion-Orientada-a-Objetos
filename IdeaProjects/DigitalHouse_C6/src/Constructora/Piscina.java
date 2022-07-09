@@ -77,11 +77,20 @@ public class Piscina implements Cotizable{
         return  total;
     }
 
+//    @Override
+//    public String generarInforme() {
+////        return "Piscina{" +
+////                "tipo='" + tipo + '\'' + this.cotizar() +
+////                '}';
+//        return "esto es una prueba mala";
+//    }
+
+
     @Override
-    public String generarInforme() {
+    public String toString() {
         return "Piscina{" +
-                "tipo='" + tipo + '\'' + this.cotizar() +
+                "tipo='" + tipo + '\'' +
+                ", precio=" + cotizar() +
                 '}';
     }
-
 }

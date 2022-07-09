@@ -46,7 +46,7 @@ public class JuegoDeMesa extends Articulo{
         } else {
             System.out.println("Cupon no valido papi, sale pa' fuera");
         }
-        return null;
+        return this.getPrecio();
     }
 
 

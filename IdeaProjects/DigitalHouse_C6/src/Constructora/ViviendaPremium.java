@@ -2,19 +2,20 @@ package Constructora;
 
 import java.util.ArrayList;
 
-public class ConstructoraComposite implements Cotizable{
+public class ViviendaPremium implements Cotizable{
 
     private Integer codigo;
     private Double bonificacion;
 
     private ArrayList<Cotizable> premium = new ArrayList<Cotizable>();
 
-    public ConstructoraComposite(Integer codigo, Double bonificacion) {
+    public ViviendaPremium(Integer codigo, Double bonificacion) {
         this.codigo = codigo;
         this.bonificacion = bonificacion;
     }
 
     public void addItems(Cotizable c){
+
         this.premium.add(c);
     }
 
@@ -30,9 +31,6 @@ public class ConstructoraComposite implements Cotizable{
         return premium;
     }
 
-    public void setPremium(ArrayList<Cotizable> premium) {
-        this.premium = premium;
-    }
 
     public Double getBonificacion() {
         return bonificacion;
@@ -52,13 +50,19 @@ public class ConstructoraComposite implements Cotizable{
 
     }
 
+//    @Override
+//    public String generarInforme() {
+//        return "ConstructoraComposite{" +
+//                "codigo=" + codigo +
+//                ", bonificacion=" + bonificacion +
+//                ", premium=" + premium +
+//                '}';
+//    }
+
     @Override
-    public String generarInforme() {
-        return "ConstructoraComposite{" +
-                "codigo=" + codigo +
-                ", bonificacion=" + bonificacion +
-                ", premium=" + premium +
+    public String toString() {
+        return "ViviendaPremium{" +
+                " precio: "+ cotizar() +
                 '}';
     }
-
 }

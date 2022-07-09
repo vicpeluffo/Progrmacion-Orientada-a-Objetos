@@ -2,6 +2,9 @@ package Jugueteria;
 
 public class JugueteriaFactory {
     private static JugueteriaFactory instancia;
+    private JugueteriaFactory(){
+
+    }
     public static JugueteriaFactory getInstance(){
         if(instancia == null){
             instancia = new JugueteriaFactory();

@@ -51,12 +51,21 @@ public class Casa implements Cotizable{
         return this.mtCdos * this.precioMtCdos;
     }
 
+//    @Override
+//    public String generarInforme() {
+//        return "Casa{" +
+//                "tipo='" + tipo + '\'' +
+//                this.cotizar() +
+//                '}';
+//    }
+
+
+
     @Override
-    public String generarInforme() {
+    public String toString() {
         return "Casa{" +
                 "tipo='" + tipo + '\'' +
-                this.cotizar() +
+                ", precio=" + cotizar() +
                 '}';
     }
-
 }
